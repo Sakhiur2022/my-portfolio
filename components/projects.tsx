@@ -1,44 +1,48 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
     id: 1,
-    title: 'Ummah Connect',
-    description: 'Emotion-based Islamic social media platform focused on women\'s cyber safety. A research-oriented project exploring emotion-aware interactions and safer online environments.',
-    tags: ['Next.js', 'Supabase', 'AI/LLMs', 'Security'],
-    gradient: 'from-[#ff5aa8] to-[#b855ff]',
-    link: 'https://ummah-connect-asr.vercel.app',
-    github: '#',
+    title: "Ummah Connect",
+    description:
+      "Emotion-based Islamic social media platform focused on women's cyber safety. A research-oriented project exploring emotion-aware interactions and safer online environments.",
+    tags: ["Next.js", "Supabase", "AI/LLMs", "Security"],
+    gradient: "from-[#ff5aa8] to-[#b855ff]",
+    link: "https://ummah-connect-asr.vercel.app",
+    github: "https://github.com/Sakhiur2022/Ummah-Connect-Project",
   },
   {
     id: 2,
-    title: 'Friendora',
-    description: 'Anime-inspired social media platform designed for Gen Z users. Focused on product experience, branding, and real social-media-style workflows with modern design.',
-    tags: ['Next.js', 'Supabase', 'PostgreSQL', 'Tailwind'],
-    gradient: 'from-[#00e8f5] to-[#ff5aa8]',
-    link: 'https://friendora.atwebpages.com',
-    github: '#',
+    title: "BuySmart",
+    description:
+      "BuySmart is an e-commerce platform for buyers, sellers, and admins with AI-assisted recommendations, sentiment analysis, refund review, and support chat.",
+    tags: ["Next.js", "Supabase", "LangChain", "Groq"],
+    gradient: "from-[#ff5aa8] to-[#b855ff]",
+    link: "https://buy-smart-asr.vercel.app",
+    github: "https://github.com/Sakhiur2022/BuySmart",
   },
   {
     id: 3,
-    title: 'Resources-21',
-    description: 'Official website for a medical equipment supplier company. Built as a real-world company project with practical business requirements and constraints.',
-    tags: ['Next.js', 'TypeScript', 'E-Commerce', 'SEO'],
-    gradient: 'from-[#b855ff] to-[#00e8f5]',
-    link: 'https://r21.com.bd',
-    github: '#',
+    title: "Friendora",
+    description:
+      "Anime-inspired social media platform designed for Gen Z users. Focused on product experience, branding, and real social-media-style workflows with modern design.",
+    tags: ["Next.js", "Supabase", "PostgreSQL", "Tailwind"],
+    gradient: "from-[#00e8f5] to-[#ff5aa8]",
+    link: "https://friendora.atwebpages.com",
+    github: "#",
   },
   {
     id: 4,
-    title: 'LangChain AI Projects',
-    description: 'Experimentation with LangChain and LLMs for intelligent application building. Focus on practical AI integration and automation workflows with n8n.',
-    tags: ['LangChain', 'LLMs', 'Python', 'n8n'],
-    gradient: 'from-[#ff5aa8] to-[#00e8f5]',
-    link: '#',
-    github: '#',
+    title: "Resources-21",
+    description:
+      "Official website for a medical equipment supplier company. Built as a real-world company project with practical business requirements and constraints.",
+    tags: ["Next.js", "TypeScript", "E-Commerce", "SEO"],
+    gradient: "from-[#b855ff] to-[#00e8f5]",
+    link: "https://r21.com.bd",
+    github: "#",
   },
 ];
 
@@ -58,13 +62,16 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
 export function Projects() {
   return (
-    <section id="projects" className="relative w-full py-20 px-6 overflow-hidden">
+    <section
+      id="projects"
+      className="relative w-full py-20 px-6 overflow-hidden"
+    >
       {/* Animated background */}
       <motion.div
         className="absolute inset-0 overflow-hidden pointer-events-none"
@@ -87,7 +94,9 @@ export function Projects() {
           <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-[#ff5aa8] to-[#00e8f5] bg-clip-text text-transparent">
             Featured Projects
           </h2>
-          <p className="text-lg text-[#8b95b3]">End-to-end systems and complete implementations</p>
+          <p className="text-lg text-[#8b95b3]">
+            End-to-end systems and complete implementations
+          </p>
         </motion.div>
 
         {/* Projects Grid */}
@@ -109,9 +118,15 @@ export function Projects() {
               <div className="relative bg-[#0f1729]/80 backdrop-blur-sm rounded-xl p-8 border border-[#1f2a42] group-hover:border-[#00e8f5]/50 transition-all">
                 {/* Project header */}
                 <div className="mb-6">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${project.gradient} mb-4`}></div>
-                  <h3 className="text-2xl font-bold text-[#e8ecff] mb-2">{project.title}</h3>
-                  <p className="text-[#8b95b3] leading-relaxed">{project.description}</p>
+                  <div
+                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${project.gradient} mb-4`}
+                  ></div>
+                  <h3 className="text-2xl font-bold text-[#e8ecff] mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-[#8b95b3] leading-relaxed">
+                    {project.description}
+                  </p>
                 </div>
 
                 {/* Tags */}
@@ -151,10 +166,7 @@ export function Projects() {
         </motion.div>
 
         {/* View all projects */}
-        <motion.div
-          variants={itemVariants}
-          className="text-center mt-16"
-        >
+        <motion.div variants={itemVariants} className="text-center mt-16">
           <motion.a
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-3 rounded-lg border border-[#00e8f5] text-[#00e8f5] font-medium hover:bg-[#00e8f5]/10 transition-all"
