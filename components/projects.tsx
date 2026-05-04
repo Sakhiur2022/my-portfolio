@@ -32,7 +32,7 @@ const projects = [
     tags: ["Next.js", "Supabase", "PostgreSQL", "Tailwind"],
     gradient: "from-[#00e8f5] to-[#ff5aa8]",
     link: "https://friendora.atwebpages.com",
-    github: "#",
+    github: "https://github.com/Sakhiur2022/Friendora",
   },
   {
     id: 4,
