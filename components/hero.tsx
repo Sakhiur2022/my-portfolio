@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Code2 } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Github, Linkedin, Code2 } from "lucide-react";
 
 export function Hero() {
   const containerVariants = {
@@ -20,7 +20,7 @@ export function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
@@ -29,13 +29,13 @@ export function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1, ease: 'easeOut' },
+      transition: { duration: 1, ease: "easeOut" },
     },
   };
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center pt-20 pb-20">
-        {/* Animated background elements */}
+      {/* Animated background elements */}
       <motion.div
         className="absolute inset-0 overflow-hidden pointer-events-none"
         initial={{ opacity: 0 }}
@@ -62,19 +62,20 @@ export function Hero() {
           <motion.div
             className="relative w-48 h-48 rounded-full overflow-hidden border-2 border-[#ff5aa8] shadow-2xl"
             style={{
-              boxShadow: '0 0 40px rgba(255, 90, 168, 0.6), inset 0 0 40px rgba(0, 232, 245, 0.1)',
+              boxShadow:
+                "0 0 40px rgba(255, 90, 168, 0.6), inset 0 0 40px rgba(0, 232, 245, 0.1)",
             }}
             animate={{
               boxShadow: [
-                '0 0 40px rgba(255, 90, 168, 0.6), inset 0 0 40px rgba(0, 232, 245, 0.1)',
-                '0 0 60px rgba(255, 90, 168, 0.8), inset 0 0 40px rgba(0, 232, 245, 0.2)',
-                '0 0 40px rgba(255, 90, 168, 0.6), inset 0 0 40px rgba(0, 232, 245, 0.1)',
+                "0 0 40px rgba(255, 90, 168, 0.6), inset 0 0 40px rgba(0, 232, 245, 0.1)",
+                "0 0 60px rgba(255, 90, 168, 0.8), inset 0 0 40px rgba(0, 232, 245, 0.2)",
+                "0 0 40px rgba(255, 90, 168, 0.6), inset 0 0 40px rgba(0, 232, 245, 0.1)",
               ],
             }}
             transition={{
               duration: 3,
               repeat: Number.POSITIVE_INFINITY,
-              ease: 'easeInOut',
+              ease: "easeInOut",
             }}
           >
             <motion.img
@@ -106,25 +107,49 @@ export function Hero() {
         </motion.h1>
 
         {/* Subheading */}
-        <motion.p variants={itemVariants} className="text-xl md:text-2xl text-[#00e8f5] mb-4 font-light">
+        <motion.p
+          variants={itemVariants}
+          className="text-xl md:text-2xl text-[#00e8f5] mb-4 font-light"
+        >
           Full-Stack Web Developer & AI Systems Builder
         </motion.p>
 
         {/* Location */}
-        <motion.p variants={itemVariants} className="text-lg text-[#8b95b3] mb-8">
-          CSE Student | Based in <span className="text-[#ff5aa8] font-semibold">Bangladesh</span>
+        <motion.p
+          variants={itemVariants}
+          className="text-lg text-[#8b95b3] mb-8"
+        >
+          CSE Student | Based in{" "}
+          <span className="text-[#ff5aa8] font-semibold">Bangladesh</span>
         </motion.p>
 
         {/* Description */}
-        <motion.p variants={itemVariants} className="text-base md:text-lg text-[#e8ecff]/80 mb-10 leading-relaxed max-w-2xl mx-auto">
-          End-to-end systems builder specializing in Next.js, Supabase, and AI/LLM integration. I focus on understanding how systems work in practice—building complete projects, breaking things, and refining through hands-on experimentation.
+        <motion.p
+          variants={itemVariants}
+          className="text-base md:text-lg text-[#e8ecff]/80 mb-10 leading-relaxed max-w-2xl mx-auto"
+        >
+          End-to-end systems builder specializing in Next.js, Supabase, and
+          AI/LLM integration. I focus on understanding how systems work in
+          practice—building complete projects, breaking things, and refining
+          through hands-on experimentation.
         </motion.p>
 
         {/* Tech Stack */}
         <motion.div variants={itemVariants} className="mb-10">
-          <p className="text-sm text-[#8b95b3] mb-4 uppercase tracking-widest">Tech Stack</p>
+          <p className="text-sm text-[#8b95b3] mb-4 uppercase tracking-widest">
+            Tech Stack
+          </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'LLMs', 'n8n'].map((tech, idx) => (
+            {[
+              "Next.js",
+              "React",
+              "TypeScript",
+              "Tailwind CSS",
+              "Supabase",
+              "PostgreSQL",
+              "LLMs",
+              "n8n",
+            ].map((tech, idx) => (
               <motion.span
                 key={tech}
                 className="px-4 py-2 rounded-lg border border-[#ff5aa8]/30 bg-[#ff5aa8]/5 text-[#ff5aa8] text-sm font-medium hover:bg-[#ff5aa8]/15 transition-colors"
@@ -138,24 +163,33 @@ export function Hero() {
         </motion.div>
 
         {/* Social Links */}
-        <motion.div variants={itemVariants} className="flex justify-center gap-6 mb-12">
+        <motion.div
+          variants={itemVariants}
+          className="flex justify-center gap-6 mb-12"
+        >
           <motion.a
-            href="https://github.com/sakhiur"
+            href="https://github.com/sakhiur2022"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-lg border border-[#00e8f5]/50 bg-[#00e8f5]/15 text-[#00e8f5] neon-glow-blue hover:bg-[#00e8f5]/25 transition-all"
-            whileHover={{ scale: 1.1, boxShadow: '0 0 30px rgba(0, 232, 245, 0.9)' }}
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0 0 30px rgba(0, 232, 245, 0.9)",
+            }}
             whileTap={{ scale: 0.95 }}
             aria-label="GitHub Profile"
           >
             <Github size={24} />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/in/sakhiur-rahman"
+            href="https://linkedin.com/in/sakhiur/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-lg border border-[#ff5aa8]/50 bg-[#ff5aa8]/15 text-[#ff5aa8] neon-glow-pink hover:bg-[#ff5aa8]/25 transition-all"
-            whileHover={{ scale: 1.1, boxShadow: '0 0 30px rgba(255, 90, 168, 0.9)' }}
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0 0 30px rgba(255, 90, 168, 0.9)",
+            }}
             whileTap={{ scale: 0.95 }}
             aria-label="LinkedIn Profile"
           >
@@ -183,8 +217,18 @@ export function Hero() {
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
       >
         <div className="text-[#00d9ff] opacity-60">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
           </svg>
         </div>
       </motion.div>
