@@ -19,7 +19,6 @@ Browse through my featured projects to see examples of my work:
 - Clean and responsive design
 - Project descriptions and live demos
 - Contact information
-- Resume and CV
 
 ## Getting Started
 
