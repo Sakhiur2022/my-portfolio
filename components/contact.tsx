@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React from "react"
+import React from "react";
 
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useState } from "react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -22,19 +22,21 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
 export function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -43,13 +45,16 @@ export function Contact() {
     e.preventDefault();
     setSubmitted(true);
     setTimeout(() => {
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: "", email: "", message: "" });
       setSubmitted(false);
     }, 3000);
   };
 
   return (
-    <section id="contact" className="relative w-full py-20 px-6 overflow-hidden">
+    <section
+      id="contact"
+      className="relative w-full py-20 px-6 overflow-hidden"
+    >
       {/* Background effects */}
       <motion.div
         className="absolute inset-0 overflow-hidden pointer-events-none"
@@ -74,7 +79,8 @@ export function Contact() {
             Get In Touch
           </h2>
           <p className="text-lg text-[#8b95b3] max-w-2xl mx-auto">
-            Have a project in mind or just want to connect? I&apos;d love to hear from you. Let&apos;s create something amazing together.
+            Have a project in mind or just want to connect? I&apos;d love to
+            hear from you. Let&apos;s create something amazing together.
           </p>
         </motion.div>
 
@@ -90,7 +96,9 @@ export function Contact() {
                 <Mail className="text-white" size={24} />
               </div>
               <h3 className="text-lg font-bold text-[#e8ecff] mb-2">Email</h3>
-              <p className="text-[#00e8f5] text-sm">sakhiur.rahman.cse@gmail.com</p>
+              <p className="text-[#00e8f5] text-sm">
+                sakhiur.rahman.cse@gmail.com
+              </p>
             </motion.div>
 
             {/* LinkedIn */}
@@ -101,9 +109,16 @@ export function Contact() {
               <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-[#00e8f5] to-[#ff5aa8] flex items-center justify-center mb-4">
                 <Phone className="text-white" size={24} />
               </div>
-              <h3 className="text-lg font-bold text-[#e8ecff] mb-2">LinkedIn</h3>
-              <a href="https://linkedin.com/in/sakhiur-rahman" target="_blank" rel="noopener noreferrer" className="text-[#ff5aa8] text-sm hover:underline">
-                linkedin.com/in/sakhiur-rahman
+              <h3 className="text-lg font-bold text-[#e8ecff] mb-2">
+                LinkedIn
+              </h3>
+              <a
+                href="https://linkedin.com/in/sakhiur-rahman"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#ff5aa8] text-sm hover:underline"
+              >
+                https://www.linkedin.com/in/sakhiur/
               </a>
             </motion.div>
 
@@ -115,7 +130,9 @@ export function Contact() {
               <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-[#b855ff] to-[#00e8f5] flex items-center justify-center mb-4">
                 <MapPin className="text-white" size={24} />
               </div>
-              <h3 className="text-lg font-bold text-[#e8ecff] mb-2">Location</h3>
+              <h3 className="text-lg font-bold text-[#e8ecff] mb-2">
+                Location
+              </h3>
               <p className="text-[#00e8f5] text-sm">Dhaka, Bangladesh</p>
             </motion.div>
           </motion.div>
@@ -127,7 +144,9 @@ export function Contact() {
             className="lg:col-span-2 p-8 rounded-xl border border-[#1f2a42] bg-[#0f1729]/50 backdrop-blur-sm"
           >
             <div className="mb-6">
-              <label className="block text-sm font-medium text-[#e8ecff] mb-2">Name</label>
+              <label className="block text-sm font-medium text-[#e8ecff] mb-2">
+                Name
+              </label>
               <input
                 type="text"
                 name="name"
@@ -140,7 +159,9 @@ export function Contact() {
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-[#e8ecff] mb-2">Email</label>
+              <label className="block text-sm font-medium text-[#e8ecff] mb-2">
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
@@ -153,7 +174,9 @@ export function Contact() {
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-[#e8ecff] mb-2">Message</label>
+              <label className="block text-sm font-medium text-[#e8ecff] mb-2">
+                Message
+              </label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -173,14 +196,20 @@ export function Contact() {
             >
               {submitted ? (
                 <>
-                  <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                  >
                     Message Sent!
                   </motion.span>
                 </>
               ) : (
                 <>
                   Send Message
-                  <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                  <Send
+                    size={18}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
                 </>
               )}
             </motion.button>
@@ -188,13 +217,19 @@ export function Contact() {
         </div>
 
         {/* Social Links Footer */}
-        <motion.div variants={itemVariants} className="text-center pt-8 border-t border-[#1f2a42]">
+        <motion.div
+          variants={itemVariants}
+          className="text-center pt-8 border-t border-[#1f2a42]"
+        >
           <p className="text-[#8b95b3] mb-6">Connect with me on social media</p>
           <div className="flex justify-center gap-6">
             {[
-              { name: 'GitHub', url: 'https://github.com/sakhiur' },
-              { name: 'LinkedIn', url: 'https://linkedin.com/in/sakhiur-rahman' },
-              { name: 'Twitter', url: 'https://twitter.com' },
+              { name: "GitHub", url: "https://github.com/Sakhiur2022" },
+              {
+                name: "LinkedIn",
+                url: "https://www.linkedin.com/in/sakhiur/",
+              },
+              { name: "X", url: "https://x.com/sakhiur2002" },
             ].map((social) => (
               <motion.a
                 key={social.name}
